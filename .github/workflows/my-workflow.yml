@@ -1,0 +1,15 @@
+name: My Workflow
+
+on:
+  schedule:
+    - cron: '20 12 * * *' # runs every day at midnight UTC
+
+jobs:
+  my-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Run script
+        run: |
+          echo "Hello, world!"
